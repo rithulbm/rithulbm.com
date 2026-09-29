@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rithul</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      background-color: #ffffff;
+      min-height: 100vh;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.75;
+      letter-spacing: -0.01em;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+      padding: 80px 24px 120px;
+    }
+
+    /* Centered content container */
+    .container {
+      position: relative;
+      width: 100%;
+      max-width: 560px;
+      margin: 0 auto;
+    }
+
+    /* Base layer: normal text with light darkness */
+    .text-layer {
+      font-size: 16px;
+      line-height: 1.75;
+      word-break: break-word;
+    }
+
+    .base-layer {
+      color: #8c8c8c; /* light darkness */
+      user-select: text;
+    }
+
+    /* Dark overlay layer: exact clone in pure black, revealed by cursor */
+    .overlay-layer {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      color: #000000; /* dark black */
+      pointer-events: none;
+      user-select: none;
+      opacity: 0;
+      transition: opacity 0.25s ease;
+      will-change: mask-image, -webkit-mask-image, opacity;
+      -webkit-mask-repeat: no-repeat;
+      mask-repeat: no-repeat;
+    }
+
+    .overlay-layer.active {
+      opacity: 1;
+    }
+
+    /* Headlines */
+    .headline {
+      margin-top: 48px;
+      margin-bottom: 20px;
+    }
+
+    .headline:first-of-type {
+      margin-top: 0;
+    }
+
+    p {
+      margin-bottom: 18px;
+    }
+
+    hr, .divider {
+      border: none;
+      border-top: 1px solid currentColor;
+      margin-top: 36px;
+      margin-bottom: 24px;
+      width: 100%;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      text-decoration-thickness: 1px;
+      cursor: pointer;
+    }
+
+    ::selection {
+      background: #000000;
+      color: #ffffff;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container" id="site-container">
+    <!-- Base text layer (light darkness) -->
+    <main class="text-layer base-layer" id="base-layer">
+      <p class="headline">context.md</p>
+      
+      <p>
+        Hey everyone, my name is Rithul.<br>
+        I'm currently 17.
+      </p>
+
+      <p>
+        &gt; I fell in love with building when I was 15 and 16..<br>
+        Started learning py from the Brocode yt channel..
+      </p>
+
+      <p>
+        &gt;Tried to build ironman interface using deterministic py code..<br>
+        It was soo cool and brough awe to me..
+      </p>
+
+      <p>
+        &gt;Then I participated in a google hackathon and built <a href="https://github.com/rithulbm/Biasneutralizer" target="_blank" rel="noopener noreferrer">biasneutralizer</a>.
+      </p>
+
+      <p>
+        &gt;Currently I'm trying to change how school and education works..
+      </p>
+
+      <p>
+        The goal is to give the best learning experience to everyone...<br>
+        To accomplish that goal,<br>
+        I am now working on <a href="https://kaiho.io" target="_blank" rel="noopener noreferrer">kaiho</a>..
+      </p>
+
+      <p>
+        It is currently offering pricing plans..<br>
+        But hope to bring affordable learning experience..
+      </p>
+
+      <p class="headline">likes.md</p>
+
+      <p>&gt;I liked to read philosophy books, learn physics and evolution.</p>
+      <p>&gt;Liked to read about civilisations like Indus and Mesopotamia and wished to live there for once...</p>
+      <p>&gt;Like going to gym, to run and the feeling when you are so sweaty and out of breath that you can feel blood rushing throughout your bod.</p>
+      <p>&gt;sit infront of the pc like a pig...</p>
+
+      <p class="headline">socials.md</p>
+
+      <p>
+        @rithulbm - personal.
+      </p>
+
+      <p>
+        On <a href="https://instagram.com/rithulbm" target="_blank" rel="noopener noreferrer">Instagram</a>(sometimes), <a href="https://x.com/rithulbm" target="_blank" rel="noopener noreferrer">X</a>, <a href="https://github.com/rithulbm" target="_blank" rel="noopener noreferrer">GitHub</a>, <a href="https://huggingface.co/rithulbm" target="_blank" rel="noopener noreferrer">huggingface</a>..
+      </p>
+
+      <p>
+        @kaiholearn - <a href="https://kaiho.io" target="_blank" rel="noopener noreferrer">kaiho</a>
+      </p>
+
+      <p>
+        On <a href="https://instagram.com/kaiholearn" target="_blank" rel="noopener noreferrer">Instagram</a>, <a href="https://facebook.com/kaiholearn" target="_blank" rel="noopener noreferrer">fb</a>, <a href="https://x.com/kaiholearn" target="_blank" rel="noopener noreferrer">X</a> and others I don't remember..
+      </p>
+
+      <p class="headline">thinking.md</p>
+
+      <p>
+        Thinking to start another start-up rather than being stuck to just <a href="https://kaiho.io" target="_blank" rel="noopener noreferrer">kaiho</a> (not assuming I would leave <a href="https://kaiho.io" target="_blank" rel="noopener noreferrer">kaiho</a>)..
+      </p>
+
+      <hr class="divider">
+      <p>more soon</p>
+    </main>
+
+    <!-- Overlay dark layer (pure black, masked to cursor movement) -->
+    <div class="text-layer overlay-layer" id="overlay-layer" aria-hidden="true"></div>
+  </div>
+
+  <script>
+    (function () {
+      const container = document.getElementById('site-container');
+      const baseLayer = document.getElementById('base-layer');
+      const overlayLayer = document.getElementById('overlay-layer');
+
+      // Mirror base content to overlay layer
+      overlayLayer.innerHTML = baseLayer.innerHTML;
+
+      // In the overlay layer, disable focus/navigation on links
+      overlayLayer.querySelectorAll('a').forEach(a => {
+        a.setAttribute('tabindex', '-1');
+        a.removeAttribute('href');
+      });
+
+      const trails = [];
+      const MAX_TRAIL_AGE = 550; // trail persistence in ms
+      const RADIUS = 140; // cursor darkness spotlight radius
+      let mouseX = -1000;
+      let mouseY = -1000;
+      let isInside = false;
+      let animFrameId = null;
+      let lastMoveTime = 0;
+
+      function updateMask() {
+        const now = performance.now();
+        const rect = container.getBoundingClientRect();
+        const localX = mouseX - rect.left;
+        const localY = mouseY - rect.top;
+
+        // Prune expired trail points
+        for (let i = trails.length - 1; i >= 0; i--) {
+          if (now - trails[i].t > MAX_TRAIL_AGE) {
+            trails.splice(i, 1);
+          }
+        }
+
+        const gradients = [];
+
+        // Active cursor spotlight directly under mouse
+        if (isInside) {
+          gradients.push(
+            `radial-gradient(circle ${RADIUS}px at ${localX}px ${localY}px, rgba(0,0,0,1) 0%, rgba(0,0,0,0.85) 35%, rgba(0,0,0,0.2) 75%, transparent 100%)`
+          );
+        }
+
+        // Trailing dark points created as cursor moves through text
+        for (let i = 0; i < trails.length; i++) {
+          const pt = trails[i];
+          const age = (now - pt.t) / MAX_TRAIL_AGE;
+          const alpha = (1 - age) * 0.75;
+          const r = RADIUS * (0.85 + 0.15 * (1 - age));
+
+          gradients.push(
+            `radial-gradient(circle ${r}px at ${pt.x}px ${pt.y}px, rgba(0,0,0,${alpha.toFixed(3)}) 0%, rgba(0,0,0,${(alpha * 0.4).toFixed(3)}) 55%, transparent 100%)`
+          );
+        }
+
+        if (gradients.length > 0) {
+          const maskValue = gradients.join(', ');
+          overlayLayer.style.webkitMaskImage = maskValue;
+          overlayLayer.style.maskImage = maskValue;
+          if (!overlayLayer.classList.contains('active')) {
+            overlayLayer.classList.add('active');
+          }
+        } else {
+          overlayLayer.classList.remove('active');
+          overlayLayer.style.webkitMaskImage = 'none';
+          overlayLayer.style.maskImage = 'none';
+        }
+
+        if (isInside || trails.length > 0) {
+          animFrameId = requestAnimationFrame(updateMask);
+        } else {
+          animFrameId = null;
+        }
+      }
+
+      function startAnimation() {
+        if (!animFrameId) {
+          animFrameId = requestAnimationFrame(updateMask);
+        }
+      }
+
+      function recordMovement(clientX, clientY) {
+        const now = performance.now();
+        mouseX = clientX;
+        mouseY = clientY;
+        isInside = true;
+
+        const rect = container.getBoundingClientRect();
+        const localX = clientX - rect.left;
+        const localY = clientY - rect.top;
+
+        const lastPt = trails[trails.length - 1];
+        if (!lastPt || Math.hypot(localX - lastPt.x, localY - lastPt.y) > 8 || now - lastMoveTime > 35) {
+          trails.push({ x: localX, y: localY, t: now });
+          lastMoveTime = now;
+        }
+
+        startAnimation();
+      }
+
+      window.addEventListener('mousemove', (e) => {
+        recordMovement(e.clientX, e.clientY);
+      }, { passive: true });
+
+      document.addEventListener('mouseleave', () => {
+        isInside = false;
+        startAnimation();
+      });
+
+      window.addEventListener('scroll', () => {
+        if (isInside || trails.length > 0) {
+          startAnimation();
+        }
+      }, { passive: true });
+
+      window.addEventListener('touchstart', (e) => {
+        if (e.touches.length > 0) {
+          recordMovement(e.touches[0].clientX, e.touches[0].clientY);
+        }
+      }, { passive: true });
+
+      window.addEventListener('touchmove', (e) => {
+        if (e.touches.length > 0) {
+          recordMovement(e.touches[0].clientX, e.touches[0].clientY);
+        }
+      }, { passive: true });
+
+      window.addEventListener('touchend', () => {
+        isInside = false;
+        startAnimation();
+      });
+
+      window.addEventListener('resize', () => {
+        if (isInside || trails.length > 0) {
+          updateMask();
+        }
+      }, { passive: true });
+    })();
+  </script>
+</body>
+</html>
